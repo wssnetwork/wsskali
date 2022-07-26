@@ -80,7 +80,7 @@ This repository consist of Dockerfile to build Docker image for kali linux with 
    $ docker volume create wsskali
    $ docker volume ls
    ```
-5. Once image created, run with `$ docker run -v <vol-name-in-host>:<pwd-in-container> --name <prefered-container-name> -it <image-name>:<image-tag> /bin/bash`
+5. Once image created, run with `$ docker run -v <vol-name-in-host>:<pwd-in-container> --name <prefered-container-name>`
    ```
    $ docker run -v wsskali:/home --name wss_kali
    ```
