@@ -84,7 +84,11 @@ This repository consist of Dockerfile to build Docker image for kali linux with 
    ```
    $ docker run -v wsskali:/home --name wss_kali
    ```
-6. If already in running state, access container with cmd `$ docker exec -it <container-running> /bin/bash`
+6. If already in running state, access container with cmd `wk` as already define in .bashrc (for linux) or `$ docker exec -it <container-running> /bin/bash`
+   ```
+   $ wk
+   ```
+   OR
    ```
    $ docker exec -it wss_kali /bin/bash
    ```

@@ -5,6 +5,10 @@ USER root
 # banner, update apt and install requirements 
 RUN \
     echo "figlet wsskali" >> /root/.bashrc && \
+    echo "alias wa='nohup bash attack-wss &'" >> /root/.bashrc && \
+    echo "alias cls='clear'" >> /root/.bashrc && \
+    echo "alias cl='clear'" >> /root/.bashrc && \
+    echo "alias c='clear'" >> /root/.bashrc && \
     apt -y update --fix-missing && apt -y upgrade && \
     apt -f --no-install-recommends install -y \
     figlet \
