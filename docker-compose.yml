@@ -6,5 +6,6 @@ services:
     container_name: wss_kali
     volumes:
       - wsskali:/home
+    tty: true
 volumes:
   wsskali:

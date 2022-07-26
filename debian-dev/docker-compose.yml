@@ -6,5 +6,6 @@ services:
     container_name: wss_debian
     volumes:
       - wssdebian:/home
+    tty: true
 volumes:
   wssdebian:
