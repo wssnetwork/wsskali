@@ -16,7 +16,9 @@ This repository consist of Dockerfile to build Docker image for kali linux with 
 * http://ffuf.me/wordlist/common.txt
 * http://ffuf.me/wordlist/parameters.txt
 * http://ffuf.me/wordlist/subdomains.txt
-# First setup for fresh server
+# First setup for fresh machine (Windows)
+`TO-DO`
+# First setup for fresh machine or server (Linux)
 1. Spin up new Linux server - prefer Debian
 2. Update, upgrade & install git
    ```
