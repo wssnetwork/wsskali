@@ -95,14 +95,5 @@ RUN \
     wget http://ffuf.me/wordlist/parameters.txt \
     wget http://ffuf.me/wordlist/subdomains.txt
 
-RUN mkdir /root/.config
-RUN mkdir /root/.config/notify
-COPY notify/provider-config.yaml /root/.config/notify/provider-config.yaml
-RUN mkdir /root/.config/subfinder
-COPY subfinder/provider-config.yaml /root/.config/subfinder/provider-config.yaml
-
-COPY wssattack /home/wssattack
-RUN chmod +x /home/wssattack
-
 # starting point
 WORKDIR /home
