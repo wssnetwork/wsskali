@@ -17,7 +17,24 @@ This repository consist of Dockerfile to build Docker image for kali linux with 
 * http://ffuf.me/wordlist/parameters.txt
 * http://ffuf.me/wordlist/subdomains.txt
 # First setup for fresh machine (Windows)
-`TO-DO`
+1. Install Docker Desktop for Windows https://docs.docker.com/desktop/install/windows-install/
+2. Select working directory, clone the repository & cd to wsskali directory
+   ```
+   $ git clone https://github.com/wssnetwork/wsskali
+   $ cd wsskali
+   ```
+3. Run docker-compose
+   ```
+   $ docker-compose up
+   ```
+4. To shutdown
+   ```
+   $ docker-compose down
+   ```
+5. To check status
+   ```
+   $ docker-compose ps
+   ```
 # First setup for fresh machine or server (Linux)
 1. Spin up new Linux server - prefer Debian
 2. Update, upgrade & install git
@@ -34,9 +51,21 @@ This repository consist of Dockerfile to build Docker image for kali linux with 
    ```
    $ bash first-setup
    ```
+5. Run docker-compose
+   ```
+   $ docker-compose up
+   ```
+6. To shutdown
+   ```
+   $ docker-compose down
+   ```
+7. To check status
+   ```
+   $ docker-compose ps
+   ```
 # How to setup and access container
 1. Run cd to wsskali directory
-2. If run `first-setup` shell script, it should auto build the docker image. run check as below:
+2. If run `docker-compose` command, it should auto build and run the docker image. run check as below:
    ```
    $ docker image ls
    ```
@@ -86,3 +115,5 @@ This script will run `kali-linux-headless` as define in https://www.kali.org/too
    1. Scan with `nuclei`
 5. Found any low, medium, high, critical - use `notify` push to slack, telegram, etc.
 6. `anew` useful to append output into existing files
+# TO-DO
+* To complete Debian Dockerfile and docker-compose.yml
