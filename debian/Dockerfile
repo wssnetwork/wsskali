@@ -1,10 +1,10 @@
-FROM kalilinux/kali-rolling:latest
+FROM debian:latest
 
 USER root
 
 # banner, update apt and install requirements 
 RUN \
-    echo "figlet wsskali" >> /root/.bashrc && \
+    echo "figlet wssdebian" >> /root/.bashrc && \
     apt -y update --fix-missing && apt -y upgrade && \
     apt -f --no-install-recommends install -y \
     figlet \
@@ -20,16 +20,7 @@ RUN \
     python3-pip \
     hakrawler
 
-# setup shell script, python script, wordlist, etc
-RUN echo "apt install kali-linux-headless" > /usr/local/bin/first-kali-setup
-RUN chmod +x /usr/local/bin/first-kali-setup
-
-RUN \
-    mkdir /wordlists && cd /wordlists \
-    wget http://ffuf.me/wordlist/common.txt \
-    wget http://ffuf.me/wordlist/parameters.txt \
-    wget http://ffuf.me/wordlist/subdomains.txt
-
+# download shell script, python script, etc
 RUN \
     wget https://raw.githubusercontent.com/m3n0sd0n4ld/GooFuzz/main/GooFuzz; \
     chmod +x GooFuzz; \
@@ -93,6 +84,13 @@ RUN \
     cd ffuf; \
     go build; \
     mv ffuf /usr/local/bin
+
+# shell script, python script, wordlists, config file, etc
+RUN \
+    mkdir /wordlists && cd /wordlists \
+    wget http://ffuf.me/wordlist/common.txt \
+    wget http://ffuf.me/wordlist/parameters.txt \
+    wget http://ffuf.me/wordlist/subdomains.txt
 
 # starting point
 WORKDIR /home

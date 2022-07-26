@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  wsskali:
+    build: .
+    image: wssdebian:1.0
+    volumes:
+      - wssdebian:/home
+volumes:
+  wssdebian:

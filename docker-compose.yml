@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  wsskali:
+    build: .
+    image: wsskali:1.0
+    volumes:
+      - wsskali:/home
+volumes:
+  wsskali:
