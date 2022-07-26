@@ -51,17 +51,17 @@ This repository consist of Dockerfile to build Docker image for kali linux with 
    ```
    $ bash first-setup
    ```
-5. Run docker-compose (in wsskali directory)
+5. Run docker compose (in wsskali directory)
    ```
-   $ docker-compose up -d
+   $ docker compose up -d
    ```
 6. To shutdown (in wsskali directory)
    ```
-   $ docker-compose down
+   $ docker compose down
    ```
 7. To check status (in wsskali directory)
    ```
-   $ docker-compose ps
+   $ docker compose ps
    ```
 # How to setup and access container
 1. Run cd to wsskali directory
