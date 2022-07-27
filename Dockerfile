@@ -11,6 +11,7 @@ RUN \
     ca-certificates \
     wget \
     git \
+    gh \
     curl \
     gnupg \
     lsb-release \
