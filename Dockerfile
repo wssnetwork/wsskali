@@ -9,6 +9,7 @@ RUN \
     apt -f --no-install-recommends install -y \
     figlet \
     ca-certificates \
+    procps \
     wget \
     git \
     gh \
@@ -46,54 +47,70 @@ RUN \
     cd subfinder/v2/cmd/subfinder; \
     go build; \
     mv subfinder /usr/local/bin/
+RUN rm -rf /subfinder
 
 RUN \
     git clone https://github.com/projectdiscovery/httpx.git; \
     cd httpx/cmd/httpx; \
     go build; \
     mv httpx /usr/local/bin/
+RUN rm -rf /httpx
 
 RUN \
     git clone https://github.com/projectdiscovery/nuclei.git; \
     cd nuclei/v2/cmd/nuclei; \
     go build; \
     mv nuclei /usr/local/bin/
+RUN rm -rf /nuclei
 
 RUN \
     git clone https://github.com/projectdiscovery/notify.git; \
     cd notify/cmd/notify; \
     go build; \
     mv notify /usr/local/bin/
+RUN rm -rf /notify
 
 RUN \
     git clone https://github.com/tomnomnom/anew.git; \
     cd anew; \
     go build; \
     mv anew /usr/local/bin/
+RUN rm -rf /anew
 
 RUN \
     git clone https://github.com/tomnomnom/waybackurls.git; \
     cd waybackurls; \
     go build; \
     mv waybackurls /usr/local/bin/
+RUN rm -rf /waybackurls
 
 RUN \
     git clone https://github.com/tomnomnom/meg.git; \
     cd meg; \
     go build; \
     mv meg /usr/local/bin
+RUN rm -rf /meg
 
 RUN \
     git clone https://github.com/tomnomnom/fff.git; \
     cd fff; \
     go build; \
     mv fff /usr/local/bin
+RUN rm -rf /fff
 
 RUN \
     git clone https://github.com/ffuf/ffuf.git; \
     cd ffuf; \
     go build; \
     mv ffuf /usr/local/bin
+RUN rm -rf /ffuf
+
+RUN \
+    git clone https://github.com/lc/gau.git; \
+    cd gau/cmd/gau; \
+    go build; \
+    mv gau /usr/local/bin
+RUN rm -rf /gau
 
 # starting point
 WORKDIR /home
