@@ -22,6 +22,7 @@ RUN \
     python3-pip \
     hakrawler
 
+RUN pip install pymongo
 # setup shell script, python script, wordlist, etc
 RUN echo "apt install kali-linux-headless" > /usr/local/bin/first-kali-setup
 RUN chmod +x /usr/local/bin/first-kali-setup
